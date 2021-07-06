@@ -1,6 +1,4 @@
-# Curriculum vitae
-# Ivan Malyarevich
-# Middle Frontend Developer
+# Curriculum vitae Ivan Malyarevich | Middle Frontend Developer
 
 Summary
 Hard skills
