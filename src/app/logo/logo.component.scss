@@ -4,7 +4,7 @@
 .logo {
   &__subtitle {
     width: 25ch;
-    animation: typing 2s steps(25), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(25) 1.3s both, blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
