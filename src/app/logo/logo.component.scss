@@ -3,8 +3,8 @@
 
 .logo {
   &__subtitle {
-    width: 25ch;
-    animation: typing 2s steps(25), blink .5s step-end infinite alternate;
+    width: 0;
+    animation: typing 2s steps(25) 2s both, blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -13,9 +13,8 @@
   }
 
   &__title {
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-      both;
-    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)  both;
     border-bottom: 0.2rem $text solid;
     border-top: 0.2rem $text solid;
     font-family: "Roboto", sans-serif;
@@ -37,8 +36,8 @@
 }
 
 @keyframes typing {
-  from {
-    width: 0
+  to {
+    width: 25ch;
   }
 }
     
