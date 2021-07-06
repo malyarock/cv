@@ -1,0 +1,132 @@
+<div id="myDiv" class="container">
+  <header class="header" id="header">
+    <app-logo></app-logo>
+
+    <app-info></app-info>
+
+    <div class="btn__start">
+      <a href="#summary" >
+        <mat-icon
+          class="animation--bounce"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          >expand_more</mat-icon
+        >
+      </a>
+    </div>
+  </header>
+
+  <section class="summary" id="summary">
+    <app-summary data-aos="fade-up"></app-summary>
+  </section>
+  
+
+  <section class="skills">
+    <div class="skill__items--right">
+      <app-headline
+        data-aos="fade-up"
+        data-aos-delay="400"
+        [icon]="'psychology'"
+        [headlineTitle]="'HARD SKILLS'"
+        [pointer]="'right'"
+      ></app-headline>
+      <app-skill
+        class="skill__end"
+        id="hard-skill"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        [skillData]="hardskills"
+        [position]="'right'"
+      ></app-skill>
+    </div>
+
+    <div class="skill__items">
+      <app-skill
+        id="soft-skill"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        [skillData]="softskills"
+        [position]="'left'"
+      ></app-skill>
+      <app-headline
+        data-aos="fade-up"
+        data-aos-delay="400"
+        [icon]="'connect_without_contact'"
+        [headlineTitle]="'SOFT SKILLS'"
+        [pointer]="'left'"
+      ></app-headline>
+    </div>
+  </section>
+
+  <br />
+
+  <div class="profedu">
+    <div class="profession" id="profession">
+      <app-headline
+        class="headline-prof"
+        [icon]="'work_outline'"
+        [headlineTitle]="'Professional Experience'"
+      >
+      </app-headline>
+
+      <div
+        class="timeline__content prof-1"
+        data-aos="fade-down"
+        data-aos-anchor=".headline-prof"
+        data-aos-delay="200"
+      >
+        <div class="marker--left">
+          <div class="br__dashed"></div>
+          <div class="br__ball"></div>
+        </div>
+        <div class="timeline__list">
+          <div class="headline__text">State-owned enterprise</div>
+          <b>Software engineer</b>
+          <span>MARCH 2020 - MAY 2021</span>
+        </div>
+      </div>
+      <div
+        class="timeline__content prof-2"
+        data-aos="fade-down"
+        data-aos-anchor=".prof-1"
+        data-aos-delay="400"
+      >
+        <div class="marker--left">
+          <div class="br__dashed"></div>
+          <div class="br__ball"></div>
+        </div>
+        <div class="timeline__list">
+          <div class="headline__text">Freelance</div>
+          <b>Software Developer</b>
+          <span>OCTOBER 2015 - MARCH 2020</span>
+        </div>
+      </div>
+    </div>
+    <div class="education" id="education">
+      <app-headline
+        class="headline-edu"
+        data-aos="fade-right"
+        [icon]="'school'"
+        [headlineTitle]="'Education'"
+      ></app-headline>
+      <div
+        class="timeline__content"
+        data-aos="fade-down"
+        data-aos-anchor=".headline-edu"
+        data-aos-delay="200"
+      >
+        <div class="marker--left">
+          <div class="br__dashed"></div>
+          <div class="br__ball"></div>
+        </div>
+        <div class="timeline__list">
+          <div class="headline__text">MASTER'S DEGREE</div>
+          <b>MECHANICAL ENGINEERING</b>
+          <span>Zaporizhzhya national technical university</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

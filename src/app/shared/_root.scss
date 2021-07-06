@@ -1,0 +1,25 @@
+@import "../shared/_variables";
+
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.7em);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $text;
+  width: 100%;
+}
+mat-icon {
+  font-family: "Material Icons Outlined" !important;
+}

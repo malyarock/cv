@@ -1,0 +1,42 @@
+<div *ngIf="pointer === undefined" class="headline__text">
+  <mat-icon
+    class="headline__icon"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    appearance="outline"
+  >
+    {{ icon }}
+  </mat-icon>
+  <span class="headline__title">{{ headlineTitle }}</span>
+</div>
+
+<div *ngIf="pointer === 'left'" class="headline">
+  <div class="headline__text">
+    <span class="headline__title">{{ headlineTitle }}</span>
+    <mat-icon
+      class="headline__icon"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      appearance="outline"
+    >
+      {{ icon }}
+    </mat-icon>
+  </div>
+
+  <div class="headline__pointer"></div>
+</div>
+
+<div *ngIf="pointer === 'right'" class="headline">
+  <div class="headline__text">
+    <mat-icon
+      class="headline__icon"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      appearance="outline"
+    >
+      {{ icon }}
+    </mat-icon>
+    <span class="headline__title">{{ headlineTitle }}</span>
+  </div>
+  <div class="headline__pointer--right"></div>
+</div>

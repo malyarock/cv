@@ -1,0 +1,49 @@
+@import "../shared/_variables";
+@import "../shared/reset";
+
+.logo {
+  &__subtitle {
+    width: 25ch;
+    animation: typing 2s steps(25), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 1em;
+  }
+
+  &__title {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      both;
+    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    border-bottom: 0.2rem $text solid;
+    border-top: 0.2rem $text solid;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 1.5rem 0 1.8rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    &__subtitle {
+      font-size: 1rem;
+    }
+    &__title {
+      font-size: 4rem;
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}

@@ -1,0 +1,39 @@
+@import "../shared/_variables";
+@import "../shared/reset";
+
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $subcolor;
+  font-size: 0.6rem;
+  height: 2rem;
+  margin-bottom: 2em;
+  width: $width;
+
+  &__nav {
+    display: none;
+
+    & > li {
+      border-right: 1px solid $subcolor;
+      padding: 0 0.5rem;
+    }
+
+    & > :last-child {
+      border: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    width: $width_ls;
+    font-size: 12px;
+  }
+
+  .footer__nav {
+    display: flex !important;
+  }
+}
