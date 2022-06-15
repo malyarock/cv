@@ -1,7 +1,7 @@
-import { Component} from '@angular/core';
+import {Component} from '@angular/core';
 
 import * as AOS from 'aos';
-import { HARD, SOFT } from './skills';
+import {EDU, HARD, PROF, SOFT} from './app.mocks';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +12,12 @@ export class AppComponent {
   title = 'ivan-cv';
   hardskills = HARD;
   softskills = SOFT;
+  experience = PROF;
+  education = EDU;
+
+  calculationDelay(id: any) {
+
+  }
 
   ngOnInit() {
     AOS.init();

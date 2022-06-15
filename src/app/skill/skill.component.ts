@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HARD, SOFT } from '../skills';
+import { HARD, SOFT } from '../app.mocks';
 
 @Component({
   selector: 'app-skill',

@@ -5,12 +5,13 @@
     <app-info></app-info>
 
     <div class="btn__start">
-      <a href="#summary" >
+      <a href="#summary">
         <mat-icon
           class="animation--bounce"
           aria-hidden="false"
           aria-label="Example home icon"
-          >expand_more</mat-icon
+        >expand_more
+        </mat-icon
         >
       </a>
     </div>
@@ -58,7 +59,7 @@
     </div>
   </section>
 
-  <br />
+  <br/>
 
   <div class="profedu">
     <div class="profession" id="profession">
@@ -69,38 +70,23 @@
       >
       </app-headline>
 
-      <div
-        class="timeline__content prof-1"
-        data-aos="fade-down"
-        data-aos-anchor=".headline-prof"
-        data-aos-delay="200"
+      <div *ngFor="let prof of experience"
+           class="timeline__content {{prof.id}}"
+           data-aos="fade-down"
+           data-aos-anchor=".headline-prof"
+           data-aos-delay="200"
       >
         <div class="marker--left">
           <div class="br__dashed"></div>
           <div class="br__ball"></div>
         </div>
         <div class="timeline__list">
-          <div class="headline__text">State-owned enterprise</div>
-          <b>Software engineer</b>
-          <span>MARCH 2020 - MAY 2021</span>
+          <div class="headline__text">{{prof.place}}</div>
+          <b>{{prof.name}}</b>
+          <span>{{prof.period}}</span>
         </div>
       </div>
-      <div
-        class="timeline__content prof-2"
-        data-aos="fade-down"
-        data-aos-anchor=".prof-1"
-        data-aos-delay="400"
-      >
-        <div class="marker--left">
-          <div class="br__dashed"></div>
-          <div class="br__ball"></div>
-        </div>
-        <div class="timeline__list">
-          <div class="headline__text">Freelance</div>
-          <b>Software Developer</b>
-          <span>OCTOBER 2015 - MARCH 2020</span>
-        </div>
-      </div>
+
     </div>
     <div class="education" id="education">
       <app-headline
@@ -109,38 +95,23 @@
         [icon]="'school'"
         [headlineTitle]="'Education'"
       ></app-headline>
-      <div
-        class="timeline__content"
-        data-aos="fade-down"
-        data-aos-anchor=".headline-edu"
-        data-aos-delay="200"
+      <div *ngFor="let prof of education"
+           class="timeline__content {{prof.id}}"
+           data-aos="fade-down"
+           data-aos-anchor=".headline-prof"
+           data-aos-delay="200"
       >
         <div class="marker--left">
           <div class="br__dashed"></div>
           <div class="br__ball"></div>
         </div>
         <div class="timeline__list">
-          <div class="headline__text">MASTER'S DEGREE</div>
-          <b>MECHANICAL ENGINEERING</b>
-          <span>Zaporizhzhya national technical university</span>
+          <div class="headline__text">{{prof.place}}</div>
+          <b>{{prof.graduate}}: {{prof.name}}</b>
+          <span>{{prof.period}}</span>
         </div>
       </div>
-      <div
-        class="timeline__content"
-        data-aos="fade-down"
-        data-aos-anchor=".headline-edu"
-        data-aos-delay="200"
-      >
-        <div class="marker--left">
-          <div class="br__dashed"></div>
-          <div class="br__ball"></div>
-        </div>
-        <div class="timeline__list">
-          <div class="headline__text">MASTER'S DEGREE</div>
-          <b>SOFTWARE ENGINEERING</b>
-          <span>Zaporizʹkyy Natsionalʹnyy Universytet</span>
-        </div>
-      </div>
+
     </div>
   </div>
 
